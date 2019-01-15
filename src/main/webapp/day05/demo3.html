@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>I读写节点</title>
+<script type="text/javascript">
+	// onload是页面加载事件，在页面加载完成后自动触发
+	window.onload = function(){
+		
+		// 1、读取节点的类型和名称
+		var p1 = document.getElementById("p1");
+		
+		// 节点类型 nodeType:
+		// 返回数值：
+		// 1----元素节点
+		// 2----属性节点
+		// 3----文本节点
+		// 8----注释节点
+		// 9----文档节点
+		console.log(p1.nodeType);// 1
+		console.log(document.nodeType);// 9
+		
+		// 节点名称
+		// 元素节点和属性节点：标签或属性名称
+		// 文本节点：永远是#text
+		// 文档节点：永远是#document
+		console.log(p1.nodeName);// P
+		console.log(document.nodeName);// #document
+		
+		// 2、读写节点的内容
+		// 双标签中间的文本叫内容
+		// innerHTML: 获取位于起始标签和结束标签内的HTML
+		var p2 = document.getElementById("p2");
+		console.log(p2.innerHTML);
+		p2.innerHTML="DOM操作包括<u>查询</u>节点";
+		
+	   //innerText :获取位于起始标签和结束标签内的文本
+	   var p3=document.getElementById("p3");
+	   console.log(p3.innerText);
+	   p3.innerText="DOM操作包括<u>查询</u>节点";
+	   
+	   // 3、读写节点的值
+	   // 表单控件中(label除外)的数据叫值
+	   var b1 = document.getElementById("b1");
+	   console.log(b1.value);
+	   b1.value = "BBB";
+	   
+	   // 4、读取节点的属性
+	   // 通过get、set方法进行读写
+	   var i1 = document.getElementById("i1");
+	   console.log(i1.getAttribute("src"));
+	   i1.setAttribute("src","../images/02.jpg");
+	   
+	   //通过属性名进行读写
+	  //主要是id,className,style可以
+	   var a1=document.getElementById("a1");
+	   console.log(a1.style);
+	   console.log(a1.style.color);
+	   a1.style.color="blue";
+	}
+</script>
+</head>
+<body>
+   <p id="p1">DOM操作包括<b>读写</b>节点</p>
+   <p id="p2">DOM操作包括<b>查询</b>节点</p>
+   <p id="p3">DOM操作包括<b>增删</b>节点</p>
+   <p>
+      <input type="button" value="AAA" id="b1"/>
+   </p>
+   <p>
+      <img src="../images/01.jpg" id="i1"/>
+   </p>
+   <p>
+      <a href="#" style="color:red;" id="a1">登陆</a>
+   </p>
+</body>
+</html>

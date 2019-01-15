@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>选择器</title>
+<style type="text/css">
+
+/* 1、元素选择器 */
+h1 {
+	color: red;
+}
+
+/* 2、类选择器 */
+.women{
+  color: blue;
+}
+
+/* 3、id选择器 */
+#p4{
+  color: green;
+}
+
+/* 4、选择器组：写出一组选择器，中间用逗号隔开 */
+.women,#p4{
+  font-weight: bold;
+}
+
+/* 5、派生选择器
+5.1选择某元素的子孙 */
+#p5 b{
+  color: yellow;
+}
+
+/* 5.2选择某元素的儿子 */
+#p5>b{
+  font-size: 30px;
+}
+
+/* 6、伪类选择器 */
+/* 6.1 选择未访问过的超链接 */
+a:link{
+  color: blue;
+}
+
+/* 6.2 选择已经访问过的超链接 */
+a:visited{
+  color: red;
+}
+
+/* 6.3 选择激活态（正在点的）按钮 */
+#b1:ACTIVE {
+	background-color: yellow;
+}
+
+/* 6.4 选择有焦点的框 */
+#t1:FOCUS {
+	background-color: green;
+}
+
+/* 6.5 选择悬停状态的图片 */
+img:HOVER {
+	width: 250px;
+    height: 250px;
+}
+</style>
+</head>
+<body>
+<h1>元素选择器</h1>
+<p class="women">苍老师啊苍老师</p>
+    <p >范传奇啊范传奇</p>
+    <p class="women">王克晶啊王克晶</p>
+    <p id="p4">瞧你们那点破事</p>
+    <p id="p5">
+              北京市<u>海淀区<b>北三环</b>西路</u>甲18号<b>中鼎大厦</b>B座8层
+    </p>
+    <p>
+       <a href="http://www.tmooc.cn">TMOOC</a>
+       <a href="https://www.iqiyi.com">爱奇艺</a>
+       <a href="http://www.apple.com">苹果</a>
+       <a href="http://www.goole.com">谷歌</a>
+       <a href="http://www.baidu.com">百度</a>
+    </p>
+    <p>
+       <input type="button" value="测试" id="b1"/>
+    </p>
+    <p>
+       <input type="text" id="t1"/>
+    </p>
+    <p>
+    <img src="../images/01.jpg">
+    <img src="../images/02.jpg">
+    <img src="../images/03.jpg">
+    </p>
+</body>
+</html>

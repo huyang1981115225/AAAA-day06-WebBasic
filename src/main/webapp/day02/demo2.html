@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Css特性</title>
+<style type="text/css">
+
+  /* 1、继承性：父元素的样式可以被子元素继承，
+  注：只有字体、字号、颜色可以继承 */
+  body {
+	font-family: "微软雅黑","文泉驿正黑","黑体";
+}
+
+  /* 2、层叠性：给元素增加不同的声明，效果会叠加 */
+  h1 {
+	color: fuchsia;
+  font-size: 20px;
+  text-shadow: 3px 6px 30px lime;
+}
+
+  /* 3、优先级：给元素增加相同的声明，以后面的为准 */
+  h2 {
+	color: red;
+}
+
+  h2 {
+	color: blue;
+}
+
+  .mi{
+    color: purple;
+    font-size: 20px;
+  }
+</style>
+</head>
+<body>
+  <h1>华为</h1>
+  <h2>苹果</h2>
+  <p class="mi">小米</p>
+</body>
+</html>

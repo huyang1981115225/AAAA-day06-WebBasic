@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>自定义对象</title>
+<script type="text/javascript">
+	//1、直接创建对象
+	function f1() {
+		var student = new Object();
+		student.name = "Tom";
+		student.age = 18;
+		student.work = function(){
+			alert("我在努力学习JS");
+		}
+		
+		//使用对象
+		alert(student.name);
+		alert(student.age);
+		student.work();
+	}
+	
+	// 2、采用简化的方式直接创建对象
+	function f2() {
+		var teacher = {
+			"name":"Jack",
+			"age":18,
+			"work":function(){
+				alert("我在教java");
+			}
+		};
+		
+		// 使用对象
+		alert(teacher.name);
+		alert(teacher.age);
+		teacher.work();
+	}
+	
+	// 3、先申明构造器  在创建对象时被自动调用
+	function Doctor(name,age,work) {
+		// 将传入的参数存储在对象上
+		this.name = name;
+		this.age = age;
+		this.job = work;
+	}
+	
+	//使用构造器创建对象（麻烦一点，但是结构清晰）
+	function f3() {
+		var doctor = new Doctor(
+				"李医生", 
+				18, 
+				function(){
+			alert("我负责治疗...")
+		});
+		
+		// 使用对象
+		alert(doctor.name);
+		alert(doctor.age);
+		doctor.job();
+	}
+	
+	//采用for in循环遍历对象
+	function f4() {
+		var teacher = {
+				"name":"Jack",
+				"age":18,
+				"work":function(){
+					alert("我在教java");
+				}
+			};
+		
+		for(p in teacher){
+			console.log(teacher[p]);
+		}
+	}
+	
+    function f5() {
+    	var a1 = [1, 2, 12];
+    	var a2 = [4, 23];
+    	a1=a1.concat(a2);
+    	a1.sort();
+    	alert(a1.join(";"));
+	}
+	
+</script>
+</head>
+<body>
+   <input type="button" value="按钮1--直接创建对象" onclick="f1();"/>
+   <input type="button" value="按钮2--简化的方式直接创建对象" onclick="f2();"/>
+   <input type="button" value="按钮3--构造器创建对象" onclick="f3();"/>
+   <input type="button" value="按钮4--for in循环遍历对象" onclick="f4();"/>
+   <input type="button" value="按钮5" onclick="f5();"/>
+</body>
+</html>

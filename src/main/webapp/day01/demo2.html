@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>演示各种标签</title>
+</head>
+<body>
+    <h3> 1、标题</h3>
+    <h1>阿里巴巴</h1>
+    <h2>腾讯</h2>
+    <h3>百度</h3>
+    <hr>
+    
+    <h3>2、段落</h3> 
+    <p>窗前明月光，</p>
+    <p>疑是地上霜。</p>
+    <p>举头望明月，</p>
+    <p>低头思故乡。</p>
+    <hr>
+    
+    <h3>3、列表</h3> 
+    <h4>3.1 有序列表  ol:order list</h4> 
+    <ol>
+      <li>江苏省</li>
+      <li>浙江省</li>
+      <li>广东省</li>
+    </ol>
+    <hr>
+    
+    <h4>3.2 无序列表  ul:unordered list</h4>
+    <ul>
+      <li>北京</li>
+      <li>上海</li>
+      <li>广州</li>
+    </ul>
+    <hr>
+    
+    <h4>3.3 嵌套列表</h4>
+    <ol>
+      <li>
+          江苏省
+        <ul>
+          <li>南京</li>
+          <li>无锡</li>
+        </ul>
+      </li>
+      <li>
+          浙江省
+        <ul>
+          <li>杭州</li>
+          <li>宁波</li>
+        </ul>
+      </li>
+    </ol>
+    <hr>
+    
+    <h3>4、 行内元素</h3>
+    <p>北京市<i>海淀区</i><b>北三环</b>西路<u>18</u>号<span style="color: red">中鼎大厦</span>B座8层</p>
+    <hr>
+    
+    <h3>5、 空格折叠原则</h3>
+    <p style="color: blue;">
+        那&nbsp;&nbsp;&nbsp;是一个秋天，<br>
+        看着&nbsp;&nbsp;&nbsp;传奇跑偏。<br>
+        奔着克&nbsp;&nbsp;&nbsp;晶而去，<br>
+        误入老苍&nbsp;&nbsp;&nbsp;心间。<br>
+    </p>
+    <hr>
+    
+    <h3>6、图片</h3>
+    <h4>6.1 绝对路径：写出图片存放的完整路径，如：D:/images/01.jpg 或者 http://www.baidu.com/01.jpg</h4>
+    <img width="400" height="250" src="C:\Users\HY\Desktop\新建文件夹\林允儿\love.jpg">
+    <img width="400" height="250" src="http://www.pptok.com/wp-content/uploads/2012/08/xunguang-4.jpg">
+    <h4>6.2 相对路径：写出图片和网页的相对关系</h4>
+    <h5>a、图片和网页平级</h5>
+    <img src="01.jpg">
+    <h5>b、图片在网页下级</h5>
+    <img src="i/02.jpg">
+    <h5>c、图片在网页上级</h5>
+    <img src="../03.jpg">
+    <hr>
+    
+    <h3>7、超链接</h3>
+    <p>
+      <a href="https://www.baidu.com">百度</a><br>
+      <a href="https://www.iqiyi.com" target="_blank">新窗口打开爱奇艺</a>
+    </p>
+    <hr>
+    
+    <h3>8、表格</h3>
+    <h4>8.1 基本用法</h4>
+    <table border="1" cellspacing="0" width="20%">
+      <tr>
+        <td>刘苍松</td>
+        <td>程祖红</td>
+      </tr>
+      <tr>
+        <td>范传奇</td>
+        <td>王克晶</td>
+      </tr>
+    </table>
+    <br>
+    <h4>8.2 跨列</h4>
+    <table border="1" cellspacing="0" width="20%">
+      <tr>
+        <td colspan="2">刘苍松</td>
+      </tr>
+      <tr>
+        <td>范传奇</td>
+        <td>王克晶</td>
+      </tr>      
+    </table>
+    <br>
+    <h4>8.3 跨行</h4>
+    <table border="1" cellspacing="0" width="20%">
+      <tr>
+        <td rowspan="2">刘苍松</td>
+        <td>程祖红</td>
+      </tr>
+      <tr>
+        <!-- <td>范传奇</td> -->
+        <td>王克晶</td>
+      </tr>      
+    </table>
+    <br>
+    <h4>8.4 行分组</h4>
+    <table border="1" cellspacing="0" width="20%">
+       <thead>
+          <tr>
+              <td>编号</td>
+              <td>名称</td>
+              <td>金额</td>
+         </tr>
+       </thead>
+       <tbody style="color:red;">
+          <tr>
+             <td>1</td>
+             <td>鼠标</td>
+             <td>100</td>
+          </tr>
+          <tr>
+             <td>2</td>
+             <td>键盘</td>
+             <td>200</td>
+          </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+             <td colspan="2">合计</td>
+             <td>300</td>
+          </tr>
+      </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window对象</title>
+<script>
+  function f1() {
+     alert("你好");
+   }
+  function f2() {
+  var b= confirm("你吃了吗?");
+  console.log(b);
+}
+  function f3() {
+  var p = prompt("你吃了什么?");
+  console.log(p);
+}
+   
+</script>
+</head>
+<body>
+      <p>
+           <input type="button" value="按钮1" onclick="f1();"/>
+           <input type="button" value="按钮2" onclick="f2();"/>
+           <input type="button" value="按钮3" onclick="f3();"/>
+      </p>
+</body>
+</html>

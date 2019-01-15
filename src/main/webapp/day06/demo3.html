@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>冒泡机制</title>
+<style>
+  div{
+  border:3px solid fuchsia;
+  width:300px;
+  padding:30px;
+  }
+  p{
+  border:3px solid lime;
+  padding:30px;
+  }
+</style>
+<script type="text/javascript">
+function f1(e) {
+	alert("button");
+	//取消冒泡
+	//IE：{"CancelBubble":false}
+	//其他：{"stopPropagation":function()}
+	if (e.stopPropagation) {
+		e.stopPropagation();
+	}else{
+		e.CancelBubble=true;
+	}
+}
+</script>
+</head>
+<body>
+    <div onclick="alert('div')">
+        <p onclick="alert('p')">
+           <input type="button" value="按钮" onclick="f1(event);"/>
+        </p>
+    </div>
+</body>
+</html>

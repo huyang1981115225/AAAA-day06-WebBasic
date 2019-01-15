@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询节点</title>
+<script type="text/javascript">
+	window.onload = function(){
+	
+		// 1、根据name查询节点
+		var radios = document.getElementsByName("sex");
+		console.log(radios);
+		
+		// 2、根据标签名查询节点
+		var lis = document.getElementsByTagName("li");
+		console.log(lis);
+		
+		// 3、根据层次查询节点
+		// 查询节点的父亲
+		var gz  = document.getElementById("gz");
+		var ul = gz.parentNode;
+		console.log(ul);
+		
+		// 查询节点的孩纸
+		console.log(ul.childNodes);//会获取节点之间所有东西，包括回车之类的，不常用了
+		
+		lis = ul.getElementsByTagName("li");
+		console.log(lis);
+		
+		// 查询节点的兄弟
+		// 节点、父亲、孩纸[i]
+		var sh = gz.parentNode.getElementsByTagName("li")[1];//第二个孩纸
+		console.log(sh);
+	}
+</script>
+</head>
+<body>
+    <p>
+        <input type="radio" name="sex"/>男
+        <input type="radio" name="sex"/>女
+    </p>
+    <ul id="city">
+        <li>北京</li>
+        <li>上海</li>
+        <li id="gz">广州</li>
+        <li>深圳</li>
+        <li>杭州</li>
+    </ul>
+    <ol>
+        <li>河北省</li>
+        <li>山东省</li>
+        <li>江苏省</li>
+    </ol>
+</body>
+</html>

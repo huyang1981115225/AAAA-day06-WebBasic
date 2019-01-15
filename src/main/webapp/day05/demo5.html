@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//增加
+	function f1() {
+		
+		// 创建一个新节点
+		var li = document.createElement("li");
+		li.innerHTML = "雄安";
+		
+		//追加此节点
+		var ul = document.getElementById("city");
+		ul.appendChild(li);
+	}
+	
+	//插入
+	function f2() {
+		
+		// 创建一个新节点
+		var li =document.createElement("li");
+		li.innerHTML = "香港";
+		
+		// 获取被插节点
+		var ul = document.getElementById("city");
+		var gz = document.getElementById("gz");
+		
+		// 插入此节点
+		ul.insertBefore(li, gz);
+	}
+	
+	//删除
+	function f3() {
+		
+		var ul = document.getElementById("city");
+		
+		//获取需要删除的节点
+		var gz = document.getElementById("gz");
+		ul.removeChild(gz);
+	}
+</script>
+</head>
+<body>
+   <p>
+       <input type="button" value="增加" onclick="f1();"/>
+       <input type="button" value="插入" onclick="f2();"/>
+       <input type="button" value="删除" onclick="f3();"/>
+   </p>
+   <ul id="city">
+       <li>北京</li>
+       <li>上海</li>
+       <li id="gz">广州</li>
+       <li>深圳</li>
+       <li>杭州</li>
+   </ul>
+</body>
+</html>

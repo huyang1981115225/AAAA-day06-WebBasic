@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>定时器</title>
+<script>
+//周期性定时器
+  function f1(){
+	//启动周期性定时器：
+	//每隔1000毫秒，让浏览器调用一次函数.
+	//返回值为定时器的id，用于停止定时器.
+	var n=5;
+	 var id= setInterval(function () {
+		console.log(n--);
+		console.log(new Date().toLocaleDateString()+" "+new Date().toLocaleTimeString());
+		if (n<0) {clearTimeout(id);
+			//停止定时器
+			clearInterval(id);
+			console.log("王炸！");
+		}
+	},1000);
+	 clearTimeout(id);
+	 //启动的定时器类似于一个子线程,
+	 //当前的方法f1类似于主线程（main）
+	 //二者并发运行，即主线程启动完子线程后，
+	 //立刻输出BOOM！而子线程却在一秒后执行第一次.
+	 console.log("BOOM!");
+  }
+  
+  //一次性定时器
+  var id;
+  function f2(){
+	  
+	  //启动一次性定时器：
+	  //在5000毫秒后，让浏览器调用函数
+	  //调用完成后，定时器会自动结束。
+	  //也可以在为调用之前手动结束
+	  id=setTimeout(function () {
+		console.log("啪！");
+	},5000);
+  }
+  
+  function f3() {
+	clearTimeout(id);
+}
+</script>
+</head>
+<body>
+          <input type="button" value="倒数"  onclick="f1();"/>
+          <input type="button" value="预备"  onclick="f2();"/>
+          <input type="button" value="取消"  onclick="f3();"/>
+</body>
+</html>

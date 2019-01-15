@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Box</title>
+<style type="text/css">
+div {
+	border: 1px solid red;
+	width: 100px;
+	height: 100px;
+}
+
+/* 1、给四个方向设置相同的边框 */
+#d1 {
+	/* 顺序：顺时针---上右下左 */
+	padding: 10px;
+	margin: 20px;
+}
+
+/* 2、给四个方向设置不同的边框 */
+#d2 {
+	padding: 10px 20px 30px 40px;
+    margin: 10px 20px 30px 40px;
+}
+
+/* 3、给但个方向设置边框 */
+#d3 {
+   padding-left:40px;
+   margin-bottom: 10px; 
+}
+
+/* 4、对称设置边框 */
+#d4 {   
+    padding: 10px 30px;
+    margin: 20px 40px;
+}
+
+/* 5、对称设置边框的特例：当左右为auto时，元素水平居中 */
+#d5 {
+  margin: 10px auto;
+}
+</style>
+</head>
+<body>
+  <div id="d0">d0</div>
+  <div id="d1">d1</div>
+  <div id="d2">d2</div>
+  <div id="d3">d3</div>
+  <div id="d4">d4</div>
+  <div id="d5">d5</div>
+</body>
+</html>

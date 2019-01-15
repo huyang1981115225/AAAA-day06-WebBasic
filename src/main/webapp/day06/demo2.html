@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>事件定义</title>
+<script type="text/javascript">
+	// 直接定义事件
+	function f1(e) {
+		console.log(1);
+		console.log(e);
+	}
+	
+	//页面加载后
+	window.onload = function () {
+		// 给按钮2绑定单击事件
+		// 如何获取事件对象：
+		// 1、直接定义事件时，传入event，并接收此值
+		// 2、动态定义事件时，直接接收即可
+		var b2 = document.getElementById("b2");
+		b2.onclick = function(e){
+			console.log(2);
+			console.log(e);
+		}
+	}
+</script>
+</head>
+<body>
+   <input type="button" value="按钮1" onclick="f1(event);"/>
+   <input type="button" value="按钮2" id="b2" />
+   <input type="button" value="按钮3"  onclick="console.log(3);"/>
+</body>
+</html>
